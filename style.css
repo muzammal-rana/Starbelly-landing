@@ -1,0 +1,1679 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+
+/* root variables */
+:root {
+  --grid-column: 12;
+  --max-container: 100%;
+  --grid-gutter-width: 30px;
+  --grid-gutter: calc(var(--grid-gutter-width) / 2);
+  --btn_color: #ffffff;
+  --btn_color_bg: #fef15a;
+  --btn_border: #fef15a;
+  --btn_color_hv: #fff;
+  --btn_color_bg_hv: #a6c76c;
+  --btn_border_hv: #a6c76c;
+  --btn_outline_color: #fef15a;
+  --btn_outline_border: #fef15a;
+  --color_body_text: #43494e;
+  --priceColor: #333333;
+}
+
+/* font-family: 'Nunito', sans-serif; */
+
+#menubtn a {
+  padding: 0;
+  margin: 0%;
+  background-color: transparent;
+}
+#menubtn a:hover {
+  background-color: transparent;
+}
+
+#cart {
+  width: 100%;
+  overflow: hidden;
+}
+#cartMenu {
+  transition: all 0.5s ease;
+}
+
+.cart-menu {
+  right: -30%;
+  width: 30%;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 0%;
+  z-index: 5;
+}
+
+.cart-menu .cart-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.cart-menu .cart-heading a {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #101843;
+}
+
+.cart-menu .cart-heading h3 {
+  font-size: 15px;
+}
+
+.cart-menu .cart-heading h3 span {
+  font-weight: bold;
+}
+
+.cart-menu .p {
+  padding: 40px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  position: relative;
+  background: radial-gradient(rgba(0, 83, 131, 100%), rgba(0, 8, 49, 100%)),
+    url(/star-belly/stars-bg.png);
+  width: 100%;
+  overflow-x: hidden;
+}
+.stars-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(/star-belly/stars-bg.png);
+  z-index: -1;
+}
+
+.header-alert div {
+  width: 100%;
+  height: 40px;
+  background-color: #fef15a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-alert div p {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.nav-buttons a {
+  padding: 8px 40px;
+  margin-right: 10px;
+  background-color: #fef15a;
+  text-decoration: none;
+  color: #333333;
+  border-radius: 40px;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  transition: all 0.5s ease;
+}
+.nav-buttons a:hover {
+  background-color: #54cfed;
+  color: white;
+}
+
+.container-fluid .nav-buttons span {
+  background-color: #54cfed;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: #fff;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+}
+
+.nav-headings h3 {
+  font-size: 28px;
+  font-family: "Borsok";
+  color: white;
+  margin: 0;
+}
+.nav-headings h3 span {
+  color: #54cfed;
+  font-family: "Borsok";
+}
+
+.container-fluid {
+  position: sticky;
+  padding: 10px 0px;
+  top: 0;
+  background: radial-gradient(rgba(0, 83, 131, 100%), rgba(0, 8, 49, 100%)),
+    url(/star-belly/stars-bg.png);
+  z-index: 5;
+}
+
+.container-fluid .logo1 img {
+  width: 80% !important;
+  height: auto;
+}
+
+.img-box {
+  width: 250px;
+  height: 170px;
+  background-image: url(/star-belly/img-box1.png);
+  background-position: center center;
+  background-size: cover;
+  margin: 0px 5px;
+  border-radius: 20px;
+}
+.img-box1 {
+  margin-left: 100px;
+  margin-bottom: 25px;
+}
+.img-box2 {
+  margin-top: 200px;
+  background-image: url(/star-belly/img-box2.png);
+}
+
+.home-headings h1 {
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.home-headings h2 {
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.home-headings h3 {
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.home-banner img {
+  margin-top: -234px;
+  width: 100%;
+}
+
+.home-headings {
+  z-index: 1;
+}
+
+.my_btn .win {
+  border: none;
+  border-radius: 40px;
+  color: #333333;
+  background-color: #fef15a;
+  font-family: "Nunito", sans-serif;
+  padding: 10px 45px;
+  font-size: 16px;
+  font-weight: 800;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+button.win:hover {
+  background-color: #54cfed;
+  color: white;
+}
+
+.home-banner {
+  margin-bottom: 10vh;
+}
+
+/* product intro section start */
+.product-intro {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+.feature-box {
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+}
+
+.feature-box img {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 4px black);
+}
+
+.feature-box h1 {
+  font-size: 22px;
+  font-weight: 900;
+  color: #54cfed;
+}
+
+.feature-box p {
+  color: white;
+  font-size: 16px;
+  font-weight: 300px;
+}
+/* product intro section end */
+
+/* slider section started */
+.slider-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider-section .heading h1 {
+  color: #fef15a;
+  margin: 10px 0px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+.slider-section .product-images {
+  width: 98%;
+  display: flex;
+}
+.slider-section .product-images .img-card {
+  width: 250px;
+  height: 250px;
+  margin: 20px 8px;
+}
+.slider-section .product-images .img-card img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30vh;
+}
+
+.product-images .slick-prev {
+  left: 10px;
+  z-index: 1;
+  display: none;
+  /* visibility: hidden; */
+}
+.product-images .slick-next {
+  right: 10px;
+  z-index: 1;
+  display: none;
+
+  /* visibility: hidden; */
+}
+
+/* slider section ended */
+
+/* star-belly-intro section started */
+.star-belly-intro {
+  position: relative;
+  width: 100%;
+  background-image: url(/star-belly/stars-blue.png);
+  padding: 100px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.star-belly-intro .container {
+  width: 100%;
+}
+
+.intro-logo {
+  margin-left: 8px;
+}
+.intro-heading {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  color: #101843;
+}
+.intro-content .intro-p p {
+  padding: 0px 10px;
+  word-spacing: 3px;
+  font-size: 16px;
+  color: #101843;
+}
+.intro-content .intro-p {
+  text-align: justify;
+  padding-top: 10px;
+}
+.intro-content .my_btn {
+  padding-top: 10px;
+}
+.intro-content .my_btn button:hover {
+  background-color: #101843;
+}
+
+.intro-content2 .yt-frame {
+  width: 100%;
+  padding-top: 24px;
+}
+
+.intro-content2 .yt-frame iframe {
+  width: 100%;
+  height: 308px;
+}
+
+.intro-content2 .intro-heading2 h1 {
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  color: #101843;
+  padding-top: 20px;
+}
+
+.intro-heading2 ul li img {
+  width: 90%;
+  margin: 10px 0px;
+  border: 4px solid white;
+  border-radius: 100%;
+}
+.intro-heading2 ul li h4 {
+  font-size: 16px;
+  color: #101843;
+}
+.intro-heading2 ul {
+  padding-left: 0;
+}
+
+.intro-heading2 ul li {
+  padding-right: 10px;
+}
+
+/* star-belly-intro section ended */
+
+/* feature section-started */
+
+.feature-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  z-index: 1;
+}
+.feature-section .feature-headings {
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+.feature-section .feature-headings h1 {
+  color: #fef15a;
+  font-size: 28px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+}
+
+.feature-section .feature-headings h1 span {
+  color: #54cfed;
+}
+
+.feature-section .feature-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  filter: drop-shadow(0 0 5px black);
+}
+.feature-content2 {
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+.feature-content2 h2 {
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-weight: 900;
+  margin: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.feature-content2 p {
+  color: white;
+  font-size: 18px;
+  padding: 3px 20px;
+}
+
+.feature-content2 p i {
+  color: goldenrod;
+  margin-right: 20px;
+}
+
+.feature-content2 .my_btn {
+  margin-left: 22px;
+  margin-bottom: 10px;
+}
+
+/* feature section-ended */
+
+/* product-selection section started */
+.product-selection {
+  width: 100%;
+  background: url(/star-belly/stars-yellow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-selection .s-headings {
+  padding: 50px 10px;
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.product-selection .s-headings h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+.product-selection .s-headings h3 {
+  font-size: 26px;
+  font-weight: 900;
+}
+.product-selection .s-headings h5 {
+  font-weight: 900;
+}
+
+/* product-selection section ended */
+
+/* product cards section started */
+
+.product-cards {
+  width: 100%;
+  margin: 10vh 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-card {
+  width: 400px;
+  height: auto;
+  margin: 20px 20px;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.p-card .img-slider {
+  display: flex;
+  padding-top: 20px;
+  max-width: 300px;
+  height: 243px;
+  object-fit: cover;
+}
+.p-card .img-slider img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: black !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 20px !important;
+  left: 0;
+  width: 20px;
+  height: 0px !important;
+  content: "" !important;
+  border-radius: 10px;
+  border: 2px solid;
+  text-align: center;
+  opacity: 0.25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .slick-prev:before {
+    content: "\f111" !important;
+    font-family: 'slick' !important;
+    color: #101843 !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+} */
+
+.slick-next:before {
+  content: ">" !important;
+  font-size: 30px !important;
+  font-family: "Nunito" !important;
+  color: #101843 !important;
+  font-weight: 900 !important;
+  font-size: 24px !important;
+}
+.slick-prev:before {
+  content: "<" !important;
+  font-size: 30px !important;
+  font-family: "Nunito" !important;
+  color: #101843 !important;
+  font-weight: 900 !important;
+  font-size: 24px !important;
+}
+
+.p-card .heading h1 {
+  color: #101843;
+  font-family: "Nunito";
+  font-size: 26px;
+  font-weight: 900;
+  padding-top: 20px;
+}
+
+/* choose option */
+
+.p-card .choose-options .option {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f6ff;
+  padding: 15px 15px;
+  margin: 10px 0px;
+  text-align: left;
+  border-radius: 15px;
+  border: 1px solid #c7d0ff;
+}
+
+.choose-options {
+  padding-top: 20px;
+}
+.choose-options p {
+  padding-left: 10px;
+}
+
+.p-card .choose-options .first {
+  display: flex;
+  text-align: left;
+  justify-content: left;
+}
+.p-card .choose-options .first p {
+  margin-bottom: 0;
+}
+.p-card .choose-options .second ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.p-card .choose-options .second {
+  display: flex;
+  text-align: left;
+  justify-content: left;
+}
+
+.p-card .choose-options .second ul li {
+  font-size: 14px;
+  padding: 4px 0px;
+}
+
+.labl {
+  display: block;
+  width: 360px;
+}
+.labl > input {
+  /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+
+.labl > input + .option {
+  /* DIV STYLES */
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.labl > input:checked + .option {
+  /* (RADIO CHECKED) DIV STYLES */
+  background-color: #cdd6ff;
+  border: 2px solid #101843;
+}
+
+.labl > input:checked + .option p {
+  font-weight: 900;
+}
+
+/* buttons section*/
+
+.p-card .buttons-section {
+  padding: 20px 10px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-card .buttons-section .quantity {
+  width: 30%;
+  background-color: #f4f6ff;
+  border: 1px solid #101f67;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+}
+
+.p-card .buttons-section .quantity span {
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.p-card .buttons-section .quantity input {
+  width: 100%;
+  outline: none;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  padding: 0px 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.p-card .buttons-section .quantity button {
+  border: none;
+  background-color: transparent;
+  color: #101843;
+  font-size: 30px;
+  font-family: "Nunito";
+  font-weight: 700;
+}
+
+.p-card .buttons-section .my_btn {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-card .buttons-section .my_btn button {
+  padding: 15px 70px;
+}
+.p-card .buttons-section .my_btn button:hover {
+  color: #101843;
+}
+
+/* buttons section */
+/* product cards section ended */
+
+/* review cards slider section start */
+
+.review-section {
+  width: 100%;
+  padding-bottom: 0vh !important;
+}
+
+.review-section .review-container {
+  width: 100%;
+  display: flex;
+}
+
+.review-section .review-container .review-card {
+  min-width: 250px;
+  max-width: 250px;
+  height: auto;
+  background-color: #e1e6ff;
+  padding: 20px 20px;
+  border-radius: 15px;
+  color: #101843;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 10px;
+}
+
+.review-section .review-container .review-card h3 {
+  font-size: 20px;
+  color: #101843;
+  font-weight: 900;
+}
+.review-section .review-container .review-card .stars i {
+  color: #2e98d4;
+}
+
+/* review cards slider section ended */
+
+/* footer section design start */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+footer .ulli {
+  display: flex;
+}
+
+footer .ulli ul {
+  display: flex;
+  list-style: none;
+  padding-top: 30px;
+}
+footer .ulli ul li a {
+  text-decoration: none;
+  padding: 0px 20px;
+  color: white;
+}
+footer .ulli ul li a:hover {
+  color: #2e98d4;
+}
+
+footer .mail-links {
+  padding-top: 30px;
+}
+
+footer .mail-links span {
+  color: white;
+  padding: 0px 20px;
+  text-decoration: underline;
+}
+
+footer .mail-links span:hover {
+  color: #2e98d4;
+}
+
+footer .copyright {
+  padding: 30px 0px;
+  color: white;
+  font-weight: 700;
+}
+
+/* footer section design end */
+
+/* product modal styling code start */
+
+/* product modal styling code ended */
+
+/* media quries section start here */
+
+@media screen and (max-width: 768px) {
+  .cart-menu {
+    right: -50%;
+    width: 50%;
+    height: 100vh;
+  }
+
+  .nav-headings h3 {
+    display: none;
+  }
+  .nav-buttons a {
+    display: none;
+  }
+  .logo1 {
+    max-width: 20%;
+    /* align-items: flex-start; */
+    /* display: flex; */
+    margin-right: 430px;
+  }
+
+  .container-fluid .nav-buttons span {
+    background-color: #54cfed;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    color: #fff;
+    position: absolute;
+    top: 11px;
+    right: 26px;
+    font-size: 12px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .home-container .row {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .home-container .row #images-div {
+    display: none !important;
+  }
+
+  .home-container .row .home-headings {
+    width: 100% !important;
+  }
+  .home-banner img {
+    margin-top: 24px;
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+
+  .home-container .row .home-headings .my_btn button {
+    position: absolute;
+    top: 713px;
+    right: 106px;
+    padding: 10px 250px;
+    margin: 30px 0px;
+  }
+
+  .product-intro {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+    margin-top: 58vh;
+  }
+  .product-intro .feature-box {
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 211px;
+  }
+  .slick-dots li button {
+    display: none !important;
+  }
+
+  .star-belly-intro .container .row .col-md-6 {
+    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 20px 0px;
+  }
+
+  .feature-content2 p {
+    font-size: 12px;
+    padding: 3px 12px;
+    margin-bottom: 8px;
+  }
+  .feature-content2 .my_btn {
+    margin-left: 13px;
+    /* margin-bottom: 0px; */
+  }
+
+  .feature-content2 .my_btn .win {
+    border: none;
+    border-radius: 6px;
+    color: #333333;
+    background-color: #fef15a;
+    font-family: "Nunito", sans-serif;
+    padding: 4px 123px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 1;
+    transition: all 0.5s ease;
+  }
+
+  .feature-content2 h2 {
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    color: white;
+    font-weight: 700;
+    margin: 0px 10px;
+    margin-bottom: 5px;
+  }
+
+  .product-cards .p-card {
+    width: 200px;
+    height: auto;
+    margin: 10px 16px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+
+  .p-card .img-slider {
+    display: flex;
+    padding-top: 20px;
+    max-width: 160px;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .slick-prev:before {
+    content: "<" !important;
+    font-size: 30px !important;
+    font-family: "Nunito" !important;
+    color: #101843 !important;
+    font-weight: 900 !important;
+    font-size: 16px !important;
+    margin-left: 10px !important;
+  }
+  .slick-next:before {
+    content: ">" !important;
+    font-size: 30px !important;
+    font-family: "Nunito" !important;
+    color: #101843 !important;
+    font-weight: 900 !important;
+    font-size: 16px !important;
+    margin-right: 10px !important;
+  }
+  .p-card .heading h1 {
+    color: #101843;
+    font-family: "Nunito";
+    font-size: 20px;
+    font-weight: 900;
+    padding-top: 0px;
+  }
+  .choose-options {
+    padding-top: 7px;
+  }
+
+  .p-card .choose-options .option {
+    width: 152px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6ff;
+    padding: 3px 2px;
+    margin: 7px 0px;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid #c7d0ff;
+  }
+
+  .p-card .choose-options {
+    width: 195px;
+    padding: 20px 20px;
+  }
+  .p-card .buttons-section {
+    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .p-card .buttons-section .quantity {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+  }
+  .p-card .buttons-section .my_btn {
+    width: 100%;
+  }
+  .p-card .buttons-section .my_btn button {
+    padding: 5px 50px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .p-card .buttons-section .quantity button {
+    font-size: 20px;
+  }
+  .labl {
+    display: block;
+    margin-right: 0px !important;
+    width: 190px;
+  }
+
+  .review-section {
+    width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 0px !important;
+  }
+
+  .review-section .slick-track {
+    display: flex;
+    margin: 0 10px 0 0 !important;
+  }
+
+  footer .ulli ul li a {
+    font-size: 12px;
+  }
+
+  footer .mail-links {
+    padding-top: 5px;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+  footer .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .logo img {
+    width: 80%;
+  }
+  footer {
+    margin-top: 5vh !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+/* for mobile screens */
+
+@media screen and (max-width: 425px) {
+  .container-fluid .logo1 img {
+    width: 140% !important;
+    height: auto;
+  }
+
+  .container-fluid .logo1 {
+    max-width: 20%;
+    /* align-items: flex-start; */
+    /* display: flex; */
+    margin-right: 150px;
+  }
+
+  .container-fluid .nav-buttons span {
+    position: absolute;
+    top: 10px;
+    right: 27px;
+  }
+
+  .home-headings {
+    text-align: center !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .home-headings h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .home-headings h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
+  }
+  .home-headings h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .home-container .row .home-headings .my_btn button {
+    position: absolute;
+    top: 490px;
+    right: 70px;
+    padding: 5px 115px;
+    margin: 41px 0px;
+    margin-bottom: 0px !important;
+  }
+
+  .home-container .row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    margin-top: 40px !important;
+  }
+
+  .product-intro {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+    margin-top: 40vh;
+  }
+
+  .product-intro .feature-box {
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+  }
+
+  .intro-heading {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .slider-section .heading h1 {
+    font-weight: 900;
+    font-size: 17px;
+  }
+
+  .intro-content .intro-p p {
+    padding: 0px 20px;
+  }
+
+  .feature-section .feature-headings h1 {
+    font-size: 20px;
+  }
+
+  .feature-section .container .row .col-md-6 h2 {
+    text-align: center !important;
+    margin-top: 30px;
+  }
+
+  .feature-content2 p {
+    font-size: 15px;
+    padding: 5px 12px;
+    margin-bottom: 15px;
+  }
+
+  .intro-heading2 ul li h4 {
+    font-size: 12px;
+  }
+
+  .feature-content2 .my_btn .win {
+    padding: 15px 152px;
+    font-size: 15px;
+  }
+
+  .product-selection .s-headings h3 {
+    font-size: 16px;
+  }
+
+  .product-selection .s-headings h1 {
+    font-size: 20px;
+  }
+
+  .product-selection .s-headings h5 {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .product-cards .p-card {
+    width: 350px;
+  }
+
+  .p-card .choose-options {
+    width: 340px;
+    padding: 20px 20px;
+  }
+
+  .product-cards .p-card {
+    width: 350px;
+    height: auto;
+    margin: 10px 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+
+  .p-card .choose-options .option {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6ff;
+    padding: 3px 2px;
+    margin: 7px 0px;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid #c7d0ff;
+  }
+
+  .p-card .buttons-section .my_btn button {
+    padding: 5px 124px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  .p-card .img-slider {
+    display: flex;
+    padding-top: 20px;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 0px !important;
+  }
+
+  .p-card .slick-dots {
+    display: none;
+  }
+
+  footer .ulli ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0 !important;
+  }
+}
+
+/* for small mobiles */
+
+@media screen and (max-width: 320px) {
+  .header-alert div p {
+    font-size: 10px;
+  }
+
+  .container-fluid .logo1 {
+    max-width: 20%;
+    /* align-items: flex-start; */
+    /* display: flex; */
+    margin-right: 65px;
+  }
+
+  .container-fluid .nav-buttons span {
+    position: absolute;
+    top: 15px !important;
+    right: 30px !important;
+  }
+
+  .nav-buttons .icon1 {
+    width: 20 !important;
+    height: 20 !important;
+  }
+
+  .home-banner img {
+    margin-top: 0px !important;
+    width: 100%;
+  }
+
+  .home-container .row .home-headings .my_btn button {
+    position: absolute;
+    top: 454px !important;
+    right: 21px !important;
+    padding: 3px 106px;
+    margin: 41px 0px;
+    margin-bottom: 0px !important;
+  }
+
+  .container-fluid .logo1 img {
+    width: 230% !important;
+    height: auto;
+  }
+
+  .slider-section .heading h1 {
+    font-weight: 900;
+    font-size: 13px;
+  }
+
+  .slider-section .heading h1 {
+    font-weight: 900;
+    font-size: 13px;
+  }
+
+  .intro-content .heading img {
+    width: 50%;
+  }
+  .intro-content2 .intro-heading2 h1 {
+    font-size: 14px;
+  }
+
+  .intro-heading2 ul li h4 {
+    font-size: 8px;
+  }
+
+  .intro-heading2 ul li h4 {
+    font-size: 8px;
+  }
+  .feature-content2 p {
+    font-size: 10px;
+    padding: 5px 12px;
+    margin-bottom: 15px;
+  }
+
+  .feature-content2 .my_btn .win {
+    padding: 5px 100px;
+    font-size: 13px;
+  }
+  .product-selection .s-headings h3 {
+    font-size: 12px;
+  }
+  .product-selection .s-headings h1 {
+    font-size: 15px;
+  }
+
+  .product-cards .p-card {
+    width: 200px;
+    height: auto;
+    margin: 10px 16px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+
+  .p-card .img-slider {
+    display: flex;
+    padding-top: 20px;
+    max-width: 160px;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .slick-prev:before {
+    content: "<" !important;
+    font-size: 30px !important;
+    font-family: "Nunito" !important;
+    color: #101843 !important;
+    font-weight: 900 !important;
+    font-size: 16px !important;
+    margin-left: 10px !important;
+  }
+  .slick-next:before {
+    content: ">" !important;
+    font-size: 30px !important;
+    font-family: "Nunito" !important;
+    color: #101843 !important;
+    font-weight: 900 !important;
+    font-size: 16px !important;
+    margin-right: 10px !important;
+  }
+  .p-card .heading h1 {
+    color: #101843;
+    font-family: "Nunito";
+    font-size: 20px;
+    font-weight: 900;
+    padding-top: 0px;
+  }
+  .choose-options {
+    padding-top: 7px;
+  }
+
+  .p-card .choose-options .option {
+    width: 152px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6ff;
+    padding: 3px 2px;
+    margin: 7px 0px;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid #c7d0ff;
+  }
+
+  .p-card .choose-options {
+    width: 195px;
+    padding: 20px 20px;
+  }
+  .p-card .buttons-section {
+    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .p-card .buttons-section .quantity {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+  }
+  .p-card .buttons-section .my_btn {
+    width: 100%;
+  }
+  .p-card .buttons-section .my_btn button {
+    padding: 5px 50px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .p-card .buttons-section .quantity button {
+    font-size: 20px;
+  }
+  .labl {
+    display: block;
+    margin-right: 0px !important;
+    width: 190px;
+  }
+
+  .feature-section .feature-headings h1 {
+    font-size: 16px;
+  }
+
+  footer .logo img {
+    width: 60%;
+  }
+
+  footer .mail-links {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-track {
+    margin-bottom: 50px;
+  }
+
+  .feature-content2 p {
+    color: white;
+    font-size: 10px !important;
+    padding: 0px 20px;
+  }
+
+  .feature-content2 .my_btn .win {
+    padding: 5px 101px !important;
+    font-size: 15px;
+  }
+
+  .product-selection .s-headings h3 {
+    font-size: 12px !important;
+  }
+
+  .product-selection .s-headings h1 {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container-fluid .nav-buttons span {
+    position: absolute;
+    top: 8px;
+    right: 7px;
+  }
+
+  .home-container .row .home-headings .my_btn button {
+    position: absolute;
+    top: 454px;
+    right: 51px;
+    padding: 3px 106px;
+    margin: 41px 0px;
+    margin-bottom: 0px !important;
+  }
+
+  .slider-section .heading h1 {
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  .slick-track {
+    margin-bottom: 100px;
+  }
+
+  .intro-content .heading img {
+    width: 50%;
+  }
+
+  .intro-content .heading img {
+    width: 50%;
+  }
+
+  .feature-content2 .my_btn .win {
+    padding: 8px 125px;
+    font-size: 15px;
+  }
+
+  .product-selection .s-headings h3 {
+    font-size: 14px;
+  }
+
+  .product-selection .s-headings h1 {
+    font-size: 18px;
+  }
+
+  footer .logo img {
+    width: 60%;
+  }
+
+  footer .mail-links {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-headings h3 {
+    font-size: 19px;
+    font-family: "Borsok";
+    color: white;
+    margin: 0;
+  }
+
+  .container-fluid .nav-buttons span {
+    position: absolute;
+    top: 20px;
+    right: 9px;
+  }
+  .feature-content2 p {
+    color: white;
+    font-size: 17px;
+    padding: 0px 20px;
+  }
+
+  .home-banner img {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .container-fluid .nav-buttons span {
+    background-color: #54cfed;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    color: #fff;
+    position: absolute;
+    top: 25px;
+    right: 12%;
+    font-size: 12px;
+    font-family: "Nunito", sans-serif;
+  }
+}
+@media screen and (max-width: 2560px) {
+  .container-fluid .nav-buttons span {
+    background-color: #54cfed;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    color: #fff;
+    position: absolute;
+    top: 25px;
+    right: 10%;
+    font-size: 12px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 330px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif")
+    50% 50% no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modal {
+  overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+  display: block;
+}
